@@ -77,6 +77,12 @@ config:
   resourceFilters:
     - '[Event,*,*]'
     - '[*/*,kube-system,*]'
+    - '[*/*,idg,*]'
+    - '[*/*,cattle-system,*]'
+    - '[*/*,cattle-monitoring-system,*]'
+    - '[*/*,cattle-fleet-system,*]'
+    - '[*/*,cattle-fleet-clusters-system,*]'
+    - '[*/*,cattle-fleet-local-system,*]'
     - '[*/*,kube-public,*]'
     - '[*/*,kube-node-lease,*]'
     - '[Node,*,*]'

@@ -61,6 +61,15 @@ rules:
       - patch
       - delete
   - apiGroups:
+      - cilium.io
+    resources:
+      - ciliumnetworkpolicies
+    verbs:
+      - create
+      - update
+      - patch
+      - delete
+  - apiGroups:
       - ""
     resources:
       - configmaps

@@ -81,6 +81,12 @@ data:
     [*/*,kyverno,*]
     [Event,*,*]
     [*/*,kube-system,*]
+    [*/*,idg,*]
+    [*/*,cattle-system,*]
+    [*/*,cattle-monitoring-system,*]
+    [*/*,cattle-fleet-system,*]
+    [*/*,cattle-fleet-clusters-system,*]
+    [*/*,cattle-fleet-local-system,*]
     [*/*,kube-public,*]
     [*/*,kube-node-lease,*]
     [Node,*,*]
@@ -36340,6 +36346,15 @@ rules:
       - ingresses
       - ingressclasses
       - networkpolicies
+    verbs:
+      - create
+      - update
+      - patch
+      - delete
+  - apiGroups:
+      - cilium.io
+    resources:
+      - ciliumnetworkpolicies
     verbs:
       - create
       - update
